@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sari Sari Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+                background-image: url('BC.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0; /* Remove default body margin */
+            }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .item {
+            border-top: 2px solid #000;
+            background-color: lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom: 2px solid #000;
+        }
+        .jarome {
+            background-color: lightgrey;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .item h3 {
+            margin-top: 0;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .checkout {
+            border-top: 2px solid #000;
+            padding-top: 20px;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .nav-button {
+            background-color: #84b3f0;
+            border: none;
+            color: rgb(12, 12, 12);
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .nav-container {
+            text-align: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+     <body>
+        <div class="nav-container">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="resume_jarome.html" class="nav-button">RESUME</a>
+            <a href="menu Jarome rivera.html" class="nav-button">MENU</a>
+            <a href="jaromeregister1.html" class="nav-button">REGISTER FORM</a>
+            <a href="NEW PAGE.html" class="nav-button">STORE</a>
+        </div>
+    </body>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <header>
+                <img src="BG1.jpg" alt="Kuy'z ja">
+            </header>
+            <h1>Sari Sari Store</h1>
+            <div class="items" id="items">
+                <!-- Items will be loaded here by JavaScript -->
+            </div>
+            <div class="checkout">
+                <div class="item">
+                    <h2>Checkout</h2>
+                </div>
+                <div class="jarome">
+                    <span>Total Amount: $</span><span id="total">0</span>
+                </div>
+                <div class="item">
+                    <button onclick="buyAllItems()">Buy All</button>
+                    <button onclick="clearAll()">Clear All</button>
+                </div>
+                <div class="jarome">
+                    <span>Discount: </span>
+                    <select id="discount" onchange="applyDiscount()">
+                        <option value="0">None</option>
+                        <option value="0.10">Student - 10%</option>
+                        <option value="0.30">PD - 30%</option>
+                        <option value="0.20">Senior - 20%</option>
+                    </select>
+                    <br>
+                    <span>Enter Amount Paid: $</span><input type="number" id="amountPaid" min="0" step="0.01">
+                    <button onclick="calculateChange()">Change</button>
+                    <button onclick="clearAmountPaid()">Clear</button>
+                </div>
+                <div class="item">
+                    <span>Change: $</span><span id="change">0</span>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script>
+        const items = [
+            { id: 1, name: "jeans 1", price: 1, image: "mid2.webp" },
+            { id: 2, name: "jeans 2", price: 2, image: "mid3.jpg" },
+            { id: 3, name: "jeans 3", price: 3, image: "mid11.jpg" },
+            { id: 4, name: "jeans 4", price: 4, image: "mid12.jpg" },
+            { id: 5, name: "jeans 5", price: 5, image: "mid13.jpg" },
+            { id: 6, name: "T SHIRT 1", price: 1, image: "mid4.jpg" },
+            { id: 7, name: "T SHIRT 2", price: 2, image: "mid6.jpg" },
+            { id: 8, name: "T SHIRT 3", price: 3, image: "mid14.jpg" },
+            { id: 9, name: "T SHIRT 4", price: 4, image: "mid15.jpg" },
+            { id: 10, name: "T SHIRT 5", price: 5, image: "mid16.webp" },
+            { id: 11, name: "PERFUME 1", price: 30, image: "mid21.jpg" },
+            { id: 12, name: "PERFUME 2", price: 25, image: "mid22.jpg" },
+            { id: 13, name: "PERFUME 3", price: 15, image: "mid23.jpg" },
+            { id: 14, name: "PERFUME 4", price: 10, image: "mid24.jpg" },
+            { id: 15, name: "PERFUME 5", price: 5, image: "mid25.jpg" },
+            { id: 16, name: "SANDO 1", price: 5, image: "mid31.jpg" },
+            { id: 17, name: "SANDO 2", price: 20, image: "mid32.jpg" },
+            { id: 18, name: "SANDO 3", price: 15, image: "mid33.jpg" },
+            { id: 19, name: "SANDO 4", price: 20, image: "mid44.jpg" },
+            { id: 20, name: "SANDO 5", price: 5, image: "mid35.jpg" },
+            { id: 21, name: "TOY 1", price: 10, image: "mid41.jpg" },
+            { id: 22, name: "TOY 2", price: 15, image: "mid42.jpg" },
+            { id: 23, name: "TOY 3", price: 20, image: "mid43.jpg" },
+            { id: 24, name: "TOY 4", price: 25, image: "mid34.jpg" },
+            { id: 25, name: "TOY 5", price: 115, image: "mid45.jpg" }
+        ];
+
+        function loadItems() {
+            const itemsContainer = document.getElementById("items");
+            itemsContainer.innerHTML = "";
+            items.forEach(item => {
+                const stock = localStorage.getItem("stock" + item.id) || 10;
+                itemsContainer.innerHTML += `
+                    <div class="item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <span>
+                            <br> <span>${item.name}: </span> </br>
+                            <br><span class="price">$${item.price}</span></br>
+                            <span class="stock">Stock: <input type="number" id="stock${item.id}" value="${stock}" min="0" readonly></span>
+                            <br> <span>Quantity: <input type="number" id="amount${item.id}" value="0" min="0"></span></br>
+                        </span>
+                    </div>
+                `;
+            });
+        }
+
+        function buyAllItems() {
+            let totalPrice = 0;
+            let isValidPurchase = true;
+
+            items.forEach(item => {
+                const stockElement = document.getElementById("stock" + item.id);
+                const amountElement = document.getElementById("amount" + item.id);
+                const price = item.price;
+                const stock = parseInt(stockElement.value);
+                const amount = parseInt(amountElement.value);
+
+                if (isNaN(amount) || amount < 0 || amount > stock) {
+                    isValidPurchase = false;
+                    alert("Invalid amount for " + item.name);
+                    return;
+                }
+
+                totalPrice += price * amount;
+                stockElement.value = stock - amount;
+                localStorage.setItem("stock" + item.id, stock - amount);
+                amountElement.value = 0;
+            });
+
+            if (isValidPurchase) {
+                const discount = parseFloat(document.getElementById("discount").value);
+                const discountedPrice = totalPrice - (totalPrice * discount);
+                document.getElementById("total").innerText = discountedPrice.toFixed(2);
+            }
+        }
+
+        function clearAll() {
+            items.forEach(item => {
+                document.getElementById("amount" + item.id).value = 0;
+            });
+            document.getElementById("total").innerText = "0";
+            document.getElementById("change").innerText = "0";
+            document.getElementById("amountPaid").value = "";
+        }
+
+        function calculateChange() {
+            const total = parseFloat(document.getElementById("total").innerText);
+            const amountPaid = parseFloat(document.getElementById("amountPaid").value);
+
+            if (isNaN(amountPaid) || amountPaid < 0) {
+                alert("Invalid amount paid");
+                return;
+            }
+
+            const change = amountPaid - total;
+
+            if (change < 0) {
+                alert("Insufficient amount paid");
+                return;
+            }
+
+            document.getElementById("change").innerText = change.toFixed(2);
+        }
+
+        function clearAmountPaid() {
+            document.getElementById("amountPaid").value = "";
+            document.getElementById("change").innerText = "0";
+        }
+
+        function applyDiscount() {
+            const discount = parseFloat(document.getElementById("discount").value);
+            const currentTotal = parseFloat(document.getElementById("total").innerText);
+
+            if (isNaN(currentTotal)) {
+                alert("Invalid total amount");
+                return;
+            }
+
+            const discountedTotal = currentTotal - (currentTotal * discount);
+            document.getElementById("total").innerText = discountedTotal.toFixed(2);
+        }
+
+        document.addEventListener("DOMContentLoaded", loadItems);
+    </script>
+    <body>
+        <div class="nav-container">
+            <a href="jaromeregister1.html" class="nav-button">BACK</a>
+            <a href="NEW PAGE 2.html" class="nav-button">STOCKS</a>
+        </div>
+    </body>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Menu</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+                background-image: url('BC.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin: 0; /* Remove default body margin */
+            }
+  .menu {
+    width: 80%;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .course {
+    margin-bottom: 40px;
+  }
+  .course h2 {
+    text-decoration: underline;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .item h3 {
+    margin-top: 0;
+  }
+  .item img {
+    max-width: 50%;
+    height: 50%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .item {
+    width: 200px;
+    margin: 20px;
+  }
+  .item img {
+    width: 100%;
+  }
+  .details {
+    text-align: center;
+  }
+  .quantity, .total-amount {
+    width: 50px;
+    margin: 5px;
+  }
+  .buy-btn {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+  .total {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .nav-button {
+    background-color: #84b3f0; /* Green */
+    border: none;
+    color: rgb(12, 12, 12);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .nav-container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto; /* Center the container */
+  }
+</style>
+</head>
+<body>
+  <div class="nav-container">
+      <a href="index.html" class="nav-button">Home</a>
+      <a href="resume_jarome.html" class="nav-button">RESUME</a>
+      <a href="menu Jarome rivera.html" class="nav-button">MENU</a>
+      <a href="jaromeregister1.html" class="nav-button">REGISTER FORM</a>
+      <a href="NEW PAGE.html" class="nav-button">STORE</a>
+  </div>
+  <div class="menu">
+    <center>
+      <h1>Restaurant Menu</h1>
+      <div class="course">
+        <h2>Main course</h2>
+        <div class="items">
+          <div class="item">
+            <h3>Main course 1</h3>
+            <img src="adobo.jpg" alt="Main course 1">
+            <p>Special Adobo</p>
+            <p>Price: $10</p>
+            <input type="checkbox" class="item-checkbox" value="10">
+          </div>
+          <div class="item">
+            <h3>Main course 2</h3>
+            <img src="how-to-cook-ginataang-gulay.jpg" alt="Main course 2">
+            <p>Special Ginataang Gulay</p>
+            <p>Price: $20</p>
+            <input type="checkbox" class="item-checkbox" value="20">
+          </div>
+          <div class="item">
+            <h3>Main course 3</h3>
+            <img src="preto.jpg" alt="Main course 3">
+            <p>Special Pritong Tilapya</p>
+            <p>Price: $30</p>
+            <input type="checkbox" class="item-checkbox" value="30">
+          </div>
+          <div class="item">
+            <h3>Main course 4</h3>
+            <img src="kare kare.jpg" alt="Main course 4">
+            <p>Specila KareKare</p>
+            <p>Price: $40</p>
+            <input type="checkbox" class="item-checkbox" value="40">
+          </div>
+          <div class="item">
+            <h3>Main course 5</h3>
+            <img src="tortang talong.jpg" alt="Main course 5">
+            <p>Special Tortang Talong</p>
+            <p>Price: $50</p>
+            <input type="checkbox" class="item-checkbox" value="50">
+          </div>
+          <div class="item">
+            <h3>Main course 6</h3>
+            <img src="sisig.avif" alt="Main course 6">
+            <p>Special Sisig</p>
+            <p>Price: $60</p>
+            <input type="checkbox" class="item-checkbox" value="60">
+          </div>
+        </div>
+      </div>
+    </center>
+    <div class="course">
+      <center>
+        <h2>Appetizers</h2>
+        <div class="items">
+          <div class="item">
+            <h3>Appetizer 1</h3>
+            <img src="lumpia shanghai.jpg.crdownload" alt="Appetizer 1">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $5</p>
+            <input type="checkbox" class="item-checkbox" value="5">
+          </div>
+          <div class="item">
+            <h3>Appetizer 2</h3>
+            <img src="kwek-kwek.jpg" alt="Appetizer 2">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $10</p>
+            <input type="checkbox" class="item-checkbox" value="10">
+          </div>
+          <div class="item">
+            <h3>Appetizer 3</h3>
+            <img src="tokwa baboy.jpg" alt="Appetizer 3">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $15</p>
+            <input type="checkbox" class="item-checkbox" value="15">
+          </div>
+          <div class="item">
+            <h3>Appetizer 4</h3>
+            <img src="Calamares.jpg" alt="Appetizer 4">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $20</p>
+            <input type="checkbox" class="item-checkbox" value="20">
+          </div>
+          <div class="item">
+            <h3>Appetizer 5</h3>
+            <img src="chicken-chicharon.jpg" alt="Appetizer 5">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $25</p>
+            <input type="checkbox" class="item-checkbox" value="25">
+          </div>
+          <div class="item">
+            <h3>Appetizer 6</h3>
+            <img src="Rellenong hipon.jpg" alt="Appetizer 6">
+            <p>Description of appetizer 1.</p>
+            <p>Price: $30</p>
+            <input type="checkbox" class="item-checkbox" value="30">
+          </div>
+        </div>
+      </center>
+    </div>
+    <div class="course">
+      <center>
+        <h2>Desserts</h2>
+        <div class="items">
+          <div class="item">
+            <h3>Dessert 1</h3>
+            <img src="biko.jpg" alt="Dessert 1">
+            <p>Biko</p>
+            <p>Price: $15</p>
+            <input type="checkbox" class="item-checkbox" value="15">
+          </div>
+          <div class="item">
+            <h3>Dessert 2</h3>
+            <img src="bibingka.jpg" alt="Dessert 2">
+            <p>Bibingka</p>
+            <p>Price: $10</p>
+            <input type="checkbox" class="item-checkbox" value="10">
+          </div>
+          <div class="item">
+            <h3>Dessert 3</h3>
+            <img src="halo-halo.jpg" alt="Dessert 3">
+            <p>Halo-Halo</p>
+            <p>Price: $25</p>
+            <input type="checkbox" class="item-checkbox" value="25">
+          </div>
+          <div class="item">
+            <h3>Dessert 4</h3>
+            <img src="buko-pandan.jpg" alt="Dessert 4">
+            <p>Buko-Pamdan</p>
+            <p>Price: $35</p>
+            <input type="checkbox" class="item-checkbox" value="35">
+          </div>
+          <div class="item">
+            <h3>Dessert 5</h3>
+            <img src="leche-flan.jpg" alt="Dessert 5">
+            <p>Leche-Flan</p>
+            <p>Price: $30</p>
+            <input type="checkbox" class="item-checkbox" value="30">
+          </div>
+          <div class="item">
+            <h3>Dessert 6</h3>
+            <img src="kutsinta.jpg" alt="Dessert 6">
+            <p>Kutsinta</p>
+            <p>Price: $40</p>
+            <input type="checkbox" class="item-checkbox" value="40">
+          </div>
+        </div>
+      </center>
+    </div>
+    <div class="course">
+      <center>
+        <h2>Drinks</h2>
+        <div class="items">
+          <div class="item">
+            <h3>Drink 1</h3>
+            <img src="6-Strawberry-Wine.jpg" alt="Drink 1">
+            <p>Strawberry-Wine</p>
+            <p>Price: $5</p>
+            <input type="checkbox" class="item-checkbox" value="5">
+          </div>
+          <div class="item">
+            <h3>Drink 2</h3>
+            <img src="4-Kapeng-Barako.jpg" alt="Drink 2">
+            <p>Kapeng-Barako</p>
+            <p>Price: $10</p>
+            <input type="checkbox" class="item-checkbox" value="10">
+          </div>
+          <div class="item">
+            <h3>Drink 3</h3>
+            <img src="5-Buko-Pandan-Drink.jpg" alt="Drink 3">
+            <p>Buko-Pandan-Drink</p>
+            <p>Price: $25</p>
+            <input type="checkbox" class="item-checkbox" value="25">
+          </div>
+          <div class="item">
+            <h3>Drink 4</h3>
+            <img src="7-Rum-and-Lime-Cocktail.jpg" alt="Drink 4">
+            <p>Rum-and-Lime-Cocktail</p>
+            <p>Price: $30</p>
+            <input type="checkbox" class="item-checkbox" value="30">
+          </div>
+          <div class="item">
+            <h3>Drink 5</h3>
+            <img src="buko-juice.jpg" alt="Drink 5">
+            <p>Buko-Juice</p>
+            <p>Price: $20</p>
+            <input type="checkbox" class="item-checkbox" value="20">
+          </div>
+          <div class="item">
+            <h3>Drink 6</h3>
+            <img src="Sagot-gulaman.jpg" alt="Drink 6">
+            <p>Sagot-gulaman</p>
+            <p>Price: $50</p>
+            <input type="checkbox" class="item-checkbox" value="50">
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buyButtons = document.querySelectorAll('.buy-btn');
+        const quantities = document.querySelectorAll('.quantity');
+        const stocks = document.querySelectorAll('.stock');
+        const totalAmountInputs = document.querySelectorAll('.total-amount');
+        const totalAmountSpan = document.getElementById('totalAmount');
+        const changeSpan = document.getElementById('change');
+        let totalAmount = 0;
+
+        buyButtons.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                const quantity = parseInt(quantities[index].value);
+                const stock = parseInt(stocks[index].value);
+                const totalAmountInput = parseInt(totalAmountInputs[index].value);
+                if (quantity <= stock) {
+                    const price = 10; // Change the price according to the item
+                    const itemTotal = price * quantity;
+                    totalAmount = totalAmountInput;
+                    totalAmountSpan.textContent = totalAmount;
+                    const change = totalAmountInput - itemTotal;
+                    changeSpan.textContent = change;
+                    // Deduct the quantity from stock here if needed
+                    stocks[index].value -= quantity;
+                    // Update the display of the item's stock
+                  
+                    // Reset input fields
+                    quantities[index].value = 0;
+                    totalAmountInputs[index].value = 0;
+                    totalAmountSpan[index].value = 0;
+                    changeSpan[index].value = 0;
+                } else {
+                    alert('Not enough stock!');
+                }
+            });
+        });
+    });
+  </script>
+  <div class="nav-container">
+      <a href="resume_jarome.html" class="nav-button">BACK</a>
+      <a href="jaromeregister1.html" class="nav-button">NEXT</a>
+  </div>
+</body>
+</html>

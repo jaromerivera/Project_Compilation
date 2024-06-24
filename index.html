@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('images (13).jpeg'); /* Background image URL */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* No repeat */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 50%; /* For rounded logo if necessary */
+        }
+
+        .header {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .gif-container {
+            margin-bottom: 20px;
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Ensures rounded corners are visible */
+        }
+
+        .gif-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button {
+            background-color: #056fac;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px #3700b3;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.1s;
+            text-decoration: none; /* Remove underline from links */
+            display: inline-block; /* Ensure proper padding and layout */
+        }
+
+        .button:hover {
+            background-color: #3700b3;
+        }
+
+        .button:active {
+            transform: translateY(4px);
+            box-shadow: 0 1px #3700b3;
+        }
+    </style>
+</head>
+<body>            
+    <div class="container">
+        <div class="logo">
+            <img src="BG1.jpg" alt="Logo">
+        </div>
+        <div class="header">Welcome to My Project Compilation!</div>
+        <div class="gif-container">
+            <img src="giphy.gif" alt="Example GIF">
+        </div>
+        <div class="buttons">
+            <a href="index.html" class="button">HOME</a>
+            <a href="resume_jarome.html" class="button">RESUME</a>
+            <a href="jaromeregister1.html" class="button">REGISTER</a>
+            <a href="menu Jarome rivera.html" class="button">MENU</a>
+            <a href="NEW PAGE.html" class="button">STORE</a>
+        </div>
+    </div>
+</body>
+</html>
